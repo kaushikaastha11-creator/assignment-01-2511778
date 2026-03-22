@@ -23,6 +23,3 @@ The Vector DB sits outside this OLTP/OLAP boundary — it is an AI index layer t
 **Trade-off: Complexity vs. Capability.** Using four different storage systems (RDBMS, Data Warehouse, Vector DB, Time-Series DB) introduces significant operational complexity: four systems to monitor, back up, secure, and keep in sync. A failure in the ETL pipeline means the warehouse has stale data; a sync delay between the RDBMS and Vector DB means the plain-English query tool misses recent records.
 
 **Mitigation:** Use a **managed, unified platform** where possible. For example, Databricks Lakehouse can unify the warehouse and lake layers, reducing two systems to one. For the Vector DB, use a managed cloud service (Pinecone) with automatic synchronization triggers via database CDC (e.g., Debezium). Implement comprehensive observability with data freshness monitors and automated alerts so that any sync failures are caught within minutes rather than discovered during a clinical query.
-```
-
-
