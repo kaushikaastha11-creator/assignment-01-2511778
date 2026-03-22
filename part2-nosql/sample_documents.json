@@ -1,0 +1,99 @@
+[
+  {
+    "_id": "PROD_E001",
+    "name": "Sony WH-1000XM5 Headphones",
+    "category": "Electronics",
+    "brand": "Sony",
+    "price": 29990,
+    "currency": "INR",
+    "in_stock": true,
+    "specifications": {
+      "battery_life_hours": 30,
+      "connectivity": [
+        "Bluetooth 5.2",
+        "3.5mm Jack"
+      ],
+      "noise_cancellation": true,
+      "voltage": "5V DC",
+      "warranty_years": 1
+    },
+    "ratings": {
+      "average": 4.7,
+      "total_reviews": 1823
+    },
+    "tags": [
+      "wireless",
+      "noise-cancelling",
+      "premium"
+    ]
+  },
+  {
+    "_id": "PROD_C001",
+    "name": "Men's Cotton Kurta",
+    "category": "Clothing",
+    "brand": "FabIndia",
+    "price": 1299,
+    "currency": "INR",
+    "in_stock": true,
+    "specifications": {
+      "fabric": "100% Cotton",
+      "sizes_available": [
+        "S",
+        "M",
+        "L",
+        "XL",
+        "XXL"
+      ],
+      "colors": [
+        "White",
+        "Blue",
+        "Beige"
+      ],
+      "care_instructions": "Machine wash cold, do not tumble dry",
+      "gender": "Men"
+    },
+    "ratings": {
+      "average": 4.3,
+      "total_reviews": 542
+    },
+    "tags": [
+      "ethnic",
+      "casual",
+      "festive"
+    ]
+  },
+  {
+    "_id": "PROD_G001",
+    "name": "Organic Whole Wheat Atta",
+    "category": "Groceries",
+    "brand": "Aashirvaad",
+    "price": 289,
+    "currency": "INR",
+    "in_stock": true,
+    "specifications": {
+      "weight_kg": 5,
+      "expiry_date": "2025-06-30",
+      "manufactured_date": "2024-06-01",
+      "organic_certified": true,
+      "nutritional_info": {
+        "calories_per_100g": 341,
+        "protein_g": 11.8,
+        "carbohydrates_g": 69.4,
+        "fat_g": 1.7,
+        "fiber_g": 2.7
+      },
+      "allergens": [
+        "gluten"
+      ]
+    },
+    "ratings": {
+      "average": 4.5,
+      "total_reviews": 3210
+    },
+    "tags": [
+      "organic",
+      "staple",
+      "healthy"
+    ]
+  }
+]
