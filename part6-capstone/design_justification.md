@@ -26,19 +26,6 @@ The Vector DB sits outside this OLTP/OLAP boundary — it is an AI index layer t
 ```
 
 ---
-
-## 🏗️ `part6-capstone/architecture_diagram.png`
-
-For this, go to **draw.io** (app.diagrams.net) and create a diagram with these components connected by arrows:
-```
-[Data Sources]
-  ICU Monitors → Time-Series DB (InfluxDB)
-  Clinical Staff → OLTP MySQL (admissions, prescriptions, billing)
-  
-[ETL Pipeline / CDC]
-  OLTP MySQL → nightly ETL → Data Warehouse (BigQuery)
-  OLTP MySQL → async sync → Vector DB (Pinecone)
-
 [AI / Reporting Layer]
   Data Warehouse → ML Model (Readmission Risk)
   Data Warehouse → BI Dashboard (Management Reports)
