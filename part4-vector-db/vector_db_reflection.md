@@ -1,0 +1,9 @@
+\## Vector DB Use Case
+
+Traditional keyword-based search would be deeply inadequate for a law firm searching 500-page contracts in plain English. Keyword search works by matching exact or near-exact terms: a query for "termination clauses" would only return paragraphs containing the literal word "termination." A contract might use synonymous language such as "contract dissolution," "early exit provisions," or "grounds for ending the agreement" — all semantically identical but invisible to a keyword search engine. This brittleness makes keyword search unreliable in the legal domain, where precise and varied language is the norm.
+
+A vector database solves this problem by converting both the contract text and the lawyer's query into high-dimensional numeric vectors called embeddings. These embeddings capture the *meaning* of text, not just its surface words. When a lawyer asks "What are the termination clauses?", the query is embedded into a vector and compared against vectors of every contract paragraph using cosine similarity. Paragraphs about early exit, dissolution conditions, and cancellation rights all cluster near the query vector in semantic space — and are retrieved even without a single shared keyword.
+
+The implementation would work as follows: each 500-page contract is split into chunks (e.g., paragraphs or sections), each chunk is embedded using a model like `all-MiniLM-L6-v2` or OpenAI's `text-embedding-3-small`, and all embeddings are stored in a vector database such as Pinecone, Weaviate, or ChromaDB. At query time, the lawyer's question is embedded and the top-k most similar chunks are retrieved and shown as results — or passed to an LLM for a summarized answer.
+
+In short, keyword search answers "does this document contain this word?", while a vector database answers "does this document contain this *idea*?" — which is exactly what legal search demands.
