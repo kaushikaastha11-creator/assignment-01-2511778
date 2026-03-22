@@ -25,9 +25,4 @@ The Vector DB sits outside this OLTP/OLAP boundary — it is an AI index layer t
 **Mitigation:** Use a **managed, unified platform** where possible. For example, Databricks Lakehouse can unify the warehouse and lake layers, reducing two systems to one. For the Vector DB, use a managed cloud service (Pinecone) with automatic synchronization triggers via database CDC (e.g., Debezium). Implement comprehensive observability with data freshness monitors and automated alerts so that any sync failures are caught within minutes rather than discovered during a clinical query.
 ```
 
----
-[AI / Reporting Layer]
-  Data Warehouse → ML Model (Readmission Risk)
-  Data Warehouse → BI Dashboard (Management Reports)
-  Vector DB + LLM → Doctor Query Interface
-  Time-Series DB → Real-time ICU Monitoring Dashboard
+
